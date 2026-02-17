@@ -1,0 +1,163 @@
+/* ================= RESET ================= */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* ================= HERO BACKGROUND ================= */
+.full-bg {
+  min-height: 100vh;
+  background-image: url("/assets/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Fixed navbar offset */
+.page-wrapper {
+  padding-top: 80px;
+}
+
+/* ================= HOTEL OVERVIEW ================= */
+.hotel-overview-section {
+  min-height: calc(100vh - 80px);
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.hotel-overview-card {
+  width: 100%;
+  min-height: 65vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  border-radius: 28px;
+}
+
+/* Fill card height */
+.hotel-overview-body {
+  min-height: 65vh;
+  display: flex;
+}
+
+/* Center content INSIDE card */
+.hotel-overview-row {
+  flex: 1;
+  align-items: center;
+}
+
+/* ================= DIVIDERS ================= */
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ffc107;
+}
+
+.divider-vertical {
+  width: 2px;
+  height: 200px;
+  background-color: #ffc107;
+}
+
+/* ================= ANIMATED TEXT ================= */
+.animated-text {
+  display: inline-block;
+}
+
+.animated-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animated-letter.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= MENU SECTION ================= */
+.menu-section {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+
+/* Menu heading */
+.menu-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #f39c12;
+}
+
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: #0b0b3b;
+  margin-top: 0.5rem;
+}
+
+/* Menu tabs */
+.menu-tab {
+  background-color: #3a0a1a;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+}
+
+.menu-tab:hover {
+  background-color: #ffc107;
+  color: #000000;
+}
+
+/* ================= NAV LINKS ================= */
+.nav-bright {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav-bright:hover {
+  color: #ffc107 !important;
+}
+
+/* FORCE INSTAGRAM ICON VISIBILITY */
+.nav-instagram {
+  display: flex;
+  align-items: center;
+}
+
+.instagram-icon {
+  color: #ffffff !important;           /* force white */
+  font-size: 1.3rem;
+  line-height: 1;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover effect */
+.nav-instagram:hover .instagram-icon {
+  color: #ffc107 !important;           /* gold on hover */
+  transform: scale(1.15);
+}
+
+/* Extra safety for dark navbar */
+.navbar-dark .instagram-icon {
+  color: #ffffff !important;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hotel-overview-card,
+  .hotel-overview-body {
+    min-height: auto;
+  }
+
+  .page-wrapper {
+    padding-top: 72px;
+  }
+
+  .hotel-overview-section {
+    padding-top: 1rem;
+  }
+}
